@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  background-image: url("/images/bg-image.jpg");
+  background-size: cover;
+}
+
+.inter-font {
+  font-family: 'Inter', sans-serif;
+}
