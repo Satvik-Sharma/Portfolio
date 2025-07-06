@@ -30,7 +30,6 @@ export default function Skills () {
           start: 'top center',
           end: 'top 10%',
           scrub: true,
-          markers: true,
         },
         opacity: 0,
         stagger: 0.3,
