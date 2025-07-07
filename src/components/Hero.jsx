@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import HALO from 'vanta/dist/vanta.globe.min'
+import HALO from 'vanta/dist/vanta.net.min'
 
 gsap.registerPlugin(SplitText)
 
