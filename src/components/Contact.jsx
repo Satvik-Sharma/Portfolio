@@ -9,12 +9,14 @@ import { CiMail, CiLocationOn } from 'react-icons/ci'
 import { IoCallOutline } from 'react-icons/io5'
 import { IoMdPaperPlane } from 'react-icons/io'
 import emailjs from '@emailjs/browser'
+import { useMediaQuery } from 'react-responsive'
 
 import { useForm } from 'react-hook-form'
 
 gsap.registerPlugin(SplitText)
 
 export default function Contact () {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
@@ -94,9 +96,8 @@ export default function Contact () {
         <div className='flex-1 flex flex-col gap-6'>
           <h1 className='text-2xl font-bold tracking-tighter'>Let's Connect</h1>
           <p className='text-sm text-white/70'>
-            Whether you have a project in mind, want to collaborate, or just
-            want to say hello, I'd love to hear from you. Feel free to reach out
-            through any of the channels below.
+            I'm always open to discussing new opportunities, interesting
+            projects, or just having a chat about technology.
           </p>
           {['email', 'phone', 'location'].map((e, i) => (
             <div
@@ -119,7 +120,7 @@ export default function Contact () {
         </div>
 
         {/* Right Content */}
-        <div className='flex-1 flex flex-col md:items-center items-center gap-10'>
+        <div className={`flex-1 flex flex-col md:items-center items-center gap-10 rounded-xl ${isMobile ? 'bg-white/6 backdrop-blur-xs px-4 py-4 rounded-xl': ''}`}>
           <div className='flex flex-col gap-2 text-center md:text-left'>
             <h1 className='text-3xl font-bold text-white'>Send a Message</h1>
             <p className='text-sm text-white/80'>

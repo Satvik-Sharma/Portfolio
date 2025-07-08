@@ -3,12 +3,14 @@ import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import HALO from 'vanta/dist/vanta.net.min'
+import HALO from 'vanta/dist/vanta.globe.min'
 import { personalInfo } from '../../constants'
+import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(SplitText)
 
 export default function Hero () {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   const nameSpanRef = useRef()
   const h2Ref = useRef()
   const heroRef = useRef(null)
@@ -74,7 +76,7 @@ export default function Hero () {
       ref={heroRef}
       className='w-full inter-font h-full min-h-screen flex items-center justify-center'
     >
-      <div className='intro text-white md:w-1/2 w-full flex flex-col gap-4 py-20 px-10 backdrop-blur-xs rounded-md'>
+      <div className='intro text-white md:w-1/2 w-full flex flex-col gap-4 py-20 px-10 rounded-md'>
         <h1 className='w-full text-6xl text-center overflow-hidden'>
           Hi, I'm{' '}
           <span ref={nameSpanRef} className='inline-block font-bold'>
