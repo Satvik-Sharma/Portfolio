@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 body {
-  background-image: url("/images/bg-image.jpg");
+  /* background-image: url("/images/bg-image.jpg");
+   */
+   background-color: #000001;
   background-size: cover;
 }
 

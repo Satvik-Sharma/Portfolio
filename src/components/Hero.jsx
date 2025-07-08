@@ -4,6 +4,7 @@ import SplitText from 'gsap/SplitText'
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import HALO from 'vanta/dist/vanta.net.min'
+import { personalInfo } from '../../constants'
 
 gsap.registerPlugin(SplitText)
 
@@ -73,15 +74,15 @@ export default function Hero () {
       ref={heroRef}
       className='w-full inter-font h-full min-h-screen flex items-center justify-center'
     >
-      <div className='intro text-white md:w-1/2 w-full flex flex-col gap-4 py-20 px-10 bg-white/10 backdrop-blur-2xl'>
+      <div className='intro text-white md:w-1/2 w-full flex flex-col gap-4 py-20 px-10 backdrop-blur-xs rounded-md'>
         <h1 className='w-full text-6xl text-center overflow-hidden'>
           Hi, I'm{' '}
           <span ref={nameSpanRef} className='inline-block font-bold'>
-            Satvik Sharma
+            {personalInfo.name}
           </span>
         </h1>
         <h2 ref={h2Ref} className='w-full text-3xl text-center text-white/80'>
-          B.Tech CSE Student at SMVDU
+          {personalInfo.StudentOf}
         </h2>
         <p className='text-2xl text-center text-white/70'>
           Passionate about creating innovative solutions with modern web

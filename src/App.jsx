@@ -1,3 +1,4 @@
+import Contact from './components/Contact';
 import Skills from './components/Skills'
 import About from "./components/About";
 import CursorFollower from "./components/CursorFollower";
@@ -12,6 +13,7 @@ export default function App () {
       <Hero />
       <About />
       <Skills />
+      <Contact />
     </main>
   )
 }

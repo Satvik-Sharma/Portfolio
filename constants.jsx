@@ -20,7 +20,7 @@ import {
   SiPostman,
   SiGreensock
 } from 'react-icons/si'
-import { VscVscodeInsiders } from "react-icons/vsc";
+import { VscVscodeInsiders } from 'react-icons/vsc'
 import { TbBrandCpp } from 'react-icons/tb'
 import { MdOutlineDeviceHub } from 'react-icons/md'
 
@@ -165,3 +165,10 @@ export const skillsList = [
   }
 ]
 
+export const personalInfo = {
+  name: 'Satvik Sharma',
+  StudentOf: 'Shri Mata Vaishno Devi University',
+  email: 'satviksharma003@gmail.com',
+  phone: '+91 60061 30782',
+  location: 'Jammu, India'
+}

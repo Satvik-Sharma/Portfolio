@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Skills () {
   const skillsRef = useRef(null)
   const headingRef = useRef(null)
+
   useGSAP(
     () => {
       gsap.from(headingRef.current, {
@@ -24,19 +25,21 @@ export default function Skills () {
         opacity: 0,
         color: 'purple'
       })
+
       gsap.from('.skill-card', {
         scrollTrigger: {
           trigger: skillsRef.current,
           start: 'top center',
           end: 'top 10%',
-          scrub: true,
+          scrub: true
         },
         opacity: 0,
-        stagger: 0.3,
+        stagger: 0.3
       })
     },
     { scope: skillsRef }
   )
+
   useEffect(() => {
     const globeEffect = GLOBE({
       el: skillsRef.current,
@@ -49,6 +52,36 @@ export default function Skills () {
       scale: 1.0,
       scaleMobile: 1.0,
       backgroundColor: '#000001'
+    })
+    // Hover animation per skill card
+    const cards = document.querySelectorAll('.skill-card')
+    cards.forEach(card => {
+      const icon = card.querySelector('.text-4xl')
+
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect()
+        const offsetX = e.clientX - rect.left
+        const offsetY = e.clientY - rect.top
+        gsap.to(icon, {
+          x: (offsetX - rect.width / 2) * 0.2,
+          y: (offsetY - rect.height / 2) * 0.2,
+          ease: 'power3.out',
+          boxShadow: '0px 8px 20px rgba(255, 255, 255, 0.2)',
+          borderRadius: '100%',
+          scale: 1.1,
+          duration: 0.3
+        })
+      })
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(icon, {
+          x: 0,
+          y: 0,
+          ease: 'power3.out',
+          boxShadow: 'none',
+          duration: 0.3
+        })
+      })
     })
 
     return () => {
@@ -81,7 +114,7 @@ export default function Skills () {
         {skillsList.map((e, i) => (
           <div
             key={i}
-            className='skill-card w-40 h-32 flex flex-col gap-3 py-5 px-4 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md hover:scale-115 transition-transform duration-300'
+            className='skill-card w-40 h-32 flex flex-col gap-3 py-5 px-4 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm hover:scale-110 transition-transform duration-300'
           >
             <div
               className='text-xs font-semibold px-2 py-1 rounded-full text-white'
@@ -94,7 +127,10 @@ export default function Skills () {
           </div>
         ))}
       </div>
-      <h1 className='text-white/70 text-center'>Always learning and exploring new technologies!</h1>
+
+      <h1 className='text-white/70 text-center'>
+        Always learning and exploring new technologies!
+      </h1>
     </section>
   )
 }
