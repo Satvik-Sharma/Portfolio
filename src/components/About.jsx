@@ -84,7 +84,7 @@ export default function About () {
         <div className='flex-1 p-6 rounded-xl flex pb-20 flex-col items-center'>
           <div className='quick-facts-card w-fit pr-20 py-10 px-10 rounded-2xl bg-gradient-to-br from-purple-500 via-white-200/50 to-red-500/50 flex flex-col items-center justify-center'>
             <h1 className='mb-4 text-3xl font-bold inter-font'>Quick Facts</h1>
-            <ul className={`flex flex-col gap-4 ${isMobile ? 'items-center' : ''}`}>
+            <ul className={`flex flex-col gap-4}`}>
               {quickFactsList.map((e, i) => (
                 <li key={i}>{e}</li>
               ))}
