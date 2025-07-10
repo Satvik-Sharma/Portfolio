@@ -5,12 +5,9 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import HALO from 'vanta/dist/vanta.globe.min'
 import { personalInfo } from '../../constants'
-import { useMediaQuery } from 'react-responsive'
-
 gsap.registerPlugin(SplitText)
 
 export default function Hero () {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
   const nameSpanRef = useRef()
   const h2Ref = useRef()
   const heroRef = useRef(null)
@@ -68,6 +65,9 @@ export default function Hero () {
       },
       '-=0.4'
     )
+    return () => {
+      split.revert()
+    }
   }, [])
 
   return (

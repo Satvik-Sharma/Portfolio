@@ -5,12 +5,10 @@ import { aboutMeList, quickFactsList } from '../../constants.jsx'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About () {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
   const aboutRef = useRef(null)
   useEffect(() => {
     const globeEffect = GLOBE({
@@ -50,7 +48,7 @@ export default function About () {
       opacity: 0,
       scale: 0,
     }, 'a')
-  })
+  }, {scope: aboutRef})
 
   return (
     <section
