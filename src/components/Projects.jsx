@@ -17,7 +17,7 @@ export default function Projects () {
         scrollTrigger: {
           trigger: projectsSectionRef.current,
           scrub: 1,
-          start: isMobile ? 'top 0%' : 'top top',
+          start: isMobile ? 'top -10%' : 'top top',
           end: isMobile ? 'bottom -50%' : 'bottom -50%',
           pin: true,
         }
