@@ -5,10 +5,12 @@ import { skillsList } from '../../constants'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Skills () {
+  const isMobile = useMediaQuery({ maxWidth: 768 })
   const skillsRef = useRef(null)
   const headingRef = useRef(null)
 
@@ -17,20 +19,20 @@ export default function Skills () {
       gsap.from(headingRef.current, {
         scrollTrigger: {
           trigger: skillsRef.current,
-          start: 'top 50%',
-          end: 'top 35%',
-          scrub: 2
+          start: 'top 90%',
+          end: 'top -150%',
         },
         y: 100,
         opacity: 0,
         color: 'purple'
       })
-
+      const start = isMobile ? 'top 30%' :  'top center';
+      const end = isMobile ? 'top -100%' : 'top 10%';
       gsap.from('.skill-card', {
         scrollTrigger: {
           trigger: skillsRef.current,
-          start: 'top center',
-          end: 'top 10%',
+          start, 
+          end,
           scrub: true
         },
         opacity: 0,

@@ -83,9 +83,6 @@ export default function Hero () {
             {personalInfo.name}
           </span>
         </h1>
-        {/* <h2 ref={h2Ref} className='w-full text-3xl text-center text-white/80'>
-          {personalInfo.StudentOf}
-        </h2> */}
         <p className='text-2xl text-center text-white/70'>
           Passionate about creating innovative solutions with modern web
           technologies. Specializing in full-stack development with React,

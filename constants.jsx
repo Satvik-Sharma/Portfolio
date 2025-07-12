@@ -172,3 +172,73 @@ export const personalInfo = {
   phone: '+91 60061 30782',
   location: 'Jammu, India'
 }
+
+export const projectsList = [
+  {
+    title: 'Z-Chat',
+    description:
+      'A feature-rich real-time chat application using Firebase. Supports smart replies, voice input/output, and seamless file sharing.',
+    image: '/images/zchat.png',
+    points: [
+      'Built with React and Firebase Realtime Database',
+      'Google OAuth-based authentication',
+      'File sharing via Appwrite Storage',
+      'Voice-to-text input and text-to-voice playback',
+      'Smart reply suggestions using Gemini API',
+      'Supports emojis using react-emoji'
+    ],
+    tech: [
+      'Next.js',
+      'TailwindCSS',
+      'Firebase Firestore',
+      'Google OAuth',
+      'Appwrite Storage',
+      'Gemini API',
+      'react-emoji'
+    ]
+  },
+  {
+    title: 'Songify',
+    description:
+      'A full-stack music streaming web app built using Next.js. Users can explore music, create playlists, and browse artist pages. Seamlessly integrates with the Saavn API for fetching tracks.',
+    image: '/images/songify.png',
+    points: [
+      'Built with Next.js and TailwindCSS',
+      'Used MongoDB for storing playlists user data',
+      'Integrated Saavn API to stream and explore music',
+      'Users can create, edit, and manage custom playlists',
+      'Artist detail pages with related songs and albums',
+      'Used Nodemailer for otp verification during signup',
+      'Implemented secure login with bcrypt hashing'
+    ],
+    tech: ['Next.js', 'TailwindCSS', 'MongoDB', 'Nodemailer', 'Saavn API']
+  },
+  {
+    title: 'Attendance Management System',
+    description:
+      'A desktop-based attendance solution built using Java Swing. It enables attendance marking through QR codes assigned to each student.',
+    image: '/images/attendance.png',
+    points: [
+      'Java Swing GUI for desktop environment',
+      'Each student assigned a unique QR code',
+      'Scans QR to mark attendance efficiently',
+      'Auto-generates attendance logs',
+      'Useful for classroom and event check-ins'
+    ],
+    tech: ['Java', 'Java Swing', 'QR Code', 'MySQL', 'JDBC']
+  },
+  {
+    title: 'Portfolio Website',
+    description:
+      'A personal portfolio website showcasing my projects, skills, and experience. Built with modern web technologies for a responsive design.',
+    image: '/images/portfolio.png',
+    points: [
+      'Responsive design using TailwindCSS',
+      'Smooth scrolling and animations with GSAP',
+      'Dynamic project showcase using React',
+      'Contact form with emailjs for inquiries',
+      'Lightweight and fast-loading'
+    ],
+    tech: ['Next.js', 'TailwindCSS', 'GSAP', 'EmailJS']
+  },
+]

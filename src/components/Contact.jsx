@@ -164,7 +164,7 @@ export default function Contact () {
         <hr className='w-24 sm:w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 border-none rounded-full' />
         <p className='intro-message text-white/60 text-center max-w-2xl'>
           I'm always open to discussing new opportunities, interesting projects,
-          or just having a chat about technology.
+          or just having a chat
         </p>
       </div>
       <div className='flex flex-col md:flex-row md:gap-4 gap-20 justify-center'>
