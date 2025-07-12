@@ -35,7 +35,7 @@ export default function Projects () {
     <section
       ref={projectsSectionRef}
       id='Projects'
-      className={`w-full ${isMobile ? 'min-h-[135vh]' : 'min-h-110vh'} flex flex-col gap-10 items-center justify-center py-14 px-4 sm:px-8 md:px-12 bg-[#000001] text-white overflow-hidden`}
+      className={`w-full ${isMobile ? 'min-h-[120vh]' : 'min-h-110vh'} flex flex-col gap-10 items-center justify-center py-10 px-4 sm:px-8 md:px-12 bg-[#000001] text-white overflow-hidden`}
     >
       {/* Section Header */}
       <div className='text-center flex flex-col gap-4'>
