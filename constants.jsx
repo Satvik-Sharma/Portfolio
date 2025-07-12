@@ -239,6 +239,6 @@ export const projectsList = [
       'Contact form with emailjs for inquiries',
       'Lightweight and fast-loading'
     ],
-    tech: ['Next.js', 'TailwindCSS', 'GSAP', 'EmailJS']
+    tech: ['React', 'TailwindCSS', 'GSAP', 'EmailJS', 'VantaJS', 'React Icons', 'React Responsive']
   },
 ]
