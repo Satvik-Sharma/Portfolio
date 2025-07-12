@@ -57,7 +57,7 @@ export default function Projects () {
             className='project-card absolute w-full md:w-[95%] h-[650px] sm:h-[550px] md:h-[400px] rounded-2xl bg-gradient-to-br from-[#3f3f3f] to-[#151516] shadow-sm shadow-white/50 hover:shadow-lg transition-all  overflow-hidden'
             style={{
               transform: isMobile
-                ? `translate(0px, ${i * 24}px)`
+                ? `translate(0px, 0px)`
                 : `translate(${i * 24}px, ${i * 24}px)`,
               zIndex: projectsList.length - i
             }}
